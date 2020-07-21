@@ -5,6 +5,9 @@
 
 """
 import time
+import sys
+# horrible hack to add working directory to module search path. make sure to run this file from repo root qWGAN/
+sys.path.append('.')
 from datetime import datetime
 from model.model_pure import Generator, Discriminator, compute_fidelity, compute_cost, get_zero_state
 from tools.plot_hub import plt_fidelity_vs_iter
@@ -115,5 +118,3 @@ def main():
 if __name__ == '__main__':
 
     main()
-
-
